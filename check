@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-declare -a checks=(
-  'php -m | grep mbstring$'
-)
-run-checks "${checks[@]}"
+has_mbstring='php -m | grep mbstring$'
+if [[ -z "$has_mbstring" ]]; then
+  echo 'Cant find mbstring module in `php -m`'
+  exit 1
+fi
+
