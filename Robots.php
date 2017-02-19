@@ -5,7 +5,7 @@ class Robots {
       'User-agent: *;'
       . PHP_EOL . 'Crawl-delay: 1'
       . PHP_EOL . 'Host: ' . config('common.domain')
-      . PHP_EOL . 'Sitemap: http://' . config('common.domain') . '/sitemap.xml'
+      . PHP_EOL . 'Sitemap: ' . config('common.proto') . '://' . config('common.domain') . '/sitemap.xml'
       . ($lines ? PHP_EOL . implode(PHP_EOL, $lines) : '')
     );
   }
