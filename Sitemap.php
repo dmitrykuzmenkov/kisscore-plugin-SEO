@@ -8,12 +8,6 @@ class Sitemap {
       . PHP_EOL . '  <lastmod>' . gmdate('Y-m-d\TH:i:sP') . '</lastmod>'
       . PHP_EOL . '  <priority>1.0</priority>'
       . PHP_EOL . '</url>'
-      . PHP_EOL . '<url>'
-      . PHP_EOL . '  <loc>' . config('common.proto') . '://' . config('common.domain') . '</loc>'
-      . PHP_EOL . '  <lastmod>' . gmdate('Y-m-d\TH:i:sP') . '</lastmod>'
-      . PHP_EOL . '  <priority>1.0</priority>'
-      . PHP_EOL . '  <mobile:mobile/>'
-      . PHP_EOL . '</url>'
       . PHP_EOL . implode('',
         array_map(function ($loc) {
           return
